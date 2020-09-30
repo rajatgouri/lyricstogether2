@@ -1,0 +1,128 @@
+<%- include('../partials/top') %>
+
+<%- include('../partials/loader') %>
+
+<%- include('../partials/header') %>
+<script src="/public/js/jquery.min.js"></script>
+
+
+<!-- ***** Latest Hindi Area Start ***** -->
+<section class="poca-latest-epiosodes section-padding-50 mt-70">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-12 mt-5">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-heading ">
+              <h4><%= song.Title %></h4>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class=" poca-portfolio">
+          <div class="row">
+            <div class="col-12 col-lg-8 p-2">
+              <div class="text-base bg-light text-center p-5">
+                <%= song.Lyrics.toString() %>
+                
+              </div>
+            </div>
+            <div class="col-0 col-lg-4">
+              <div class="border text-center" style="height: 336px; " >
+              
+              </div>
+              <div class="row">
+                    <div class="col-12 mt-3">
+                      <h5>Song Info</h5>
+                      <ul class="list-group">
+                        <% if (song.Singer) { %>
+                          <li class="list-group-item">Singer: <%= song.Singer %></li>
+                        <% } %>
+                        <% if (song.Lyricst) { %>
+                          <li class="list-group-item">Lyricst: <%= song.Lyricst %></li>
+                        <% } %>
+                        <% if (song.Music) { %>
+                          <li class="list-group-item">Music: <%= song.Music %></li>
+                        <% } %>
+                        <% if (song.Album) { %>
+                          <li class="list-group-item">Album: <%= song.Album %></li>
+                        <% } %>
+                        <% if (song.Director) { %>
+                          <li class="list-group-item">Director: <%= song.Director %></li>
+                        <% } %>
+                        <% if (song.Label) { %>
+                          <li class="list-group-item">Music Label: <%= song.Label %></li>
+                        <% } %>
+                        <% if (song.Language) { %>
+                          <li class="list-group-item">Language: <%= song.Language %></li>
+                        <% } %>
+                        
+                      </ul>
+                    </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+</section>
+
+<script>
+  jQuery(() => {
+    
+    let val = $('.text-base').text()
+
+    val = val.replace('This is a modal window.Beginning of dialog window. Escape will cancel and close the window.End of dialog window')
+    let index = (val.indexOf('Written by'))
+    val = [val.slice(0, index), '<br>', val.slice(index)].join('');
+
+    async function hasHindiCharacters(str)
+    {
+      
+      let char = val.split("")
+      for (let i=0; i< char.length; i++) {
+          var charCode = char[i].charCodeAt(); 
+          if(charCode >= 2309 && charCode <=2361) {
+            let index = val.indexOf(char[i])
+            val = [val.slice(0, index), '<br><br>', val.slice(index)].join('');
+            break
+          }
+      }
+
+    }
+
+    hasHindiCharacters()
+    $('.text-base').html(val)
+  })
+</script>
+
+
+
+<%- include('../partials/footer') %>
+
+
+<!-- ******* All JS ******* -->
+<!-- jQuery js -->
+<!-- Popper js -->
+<script src="/public/js/popper.min.js"></script>
+<!-- Bootstrap js -->
+<script src="/public/js/bootstrap.min.js"></script>
+<!-- All js -->
+<script src="/public/js/poca.bundle.js"></script>
+<!-- Active js -->
+<script src="/public/js/default-assets/active.js"></script>
+<%- include('../partials/bottom') %>

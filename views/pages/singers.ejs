@@ -1,0 +1,114 @@
+<%- include('../partials/top') %>
+
+<%- include('../partials/loader') %>
+
+<%- include('../partials/header') %>
+
+
+<!-- ***** Latest Hindi Area Start ***** -->
+<section class="poca-latest-epiosodes section-padding-50 mt-70">
+  <div class="container">
+
+    <div class="row">
+
+        <!-- Latest songs  -->
+        <div class="col-md-12 mt-5">
+          <div class="row">
+            <!-- Section Heading -->
+            <div class="col-12">
+              <div class="section-heading ">
+                <h4 class="text-capitalize">Singers List</h4>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+      
+          <div class=" poca-portfolio">
+            <% if(singers.length > 0) { %>
+            <ul class="list-group">
+
+              <% for(let i=0; i< singers.length ; i++) { %>
+              <li class="row list-group-item border-0 mt-1 mb-1">
+                <a href="/singer/<%= singers[i].name %>">
+                <div class="col-12  single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
+                  <div class="poca-music-area style-2 row  flex-wrap">
+                    <div class="col-4 h-100 col-sm-3  p-3 ">
+                      <img src="/public/img/bg-img/23.jpg" class="h-100 w-100" alt="">
+                    </div>
+                    <div class="col-8  col-sm-9 p-2">
+                      <h6><%= singers[i].name %> Songs</h6>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              </li> 
+              <% } %>
+            </ul>
+            <% }  else {%>
+              <div class="w-100 bg-light p-3" style="height: 400px;" >
+                <p class="">No Singer Found</p>
+              </div>
+            <% } %>
+         
+          </div>
+        </div>
+    </div>
+
+    <div class="row  mt-4 mr-2">
+      <div class="col-12 text-right alpha w-100 pt-2 pb-2"  style="overflow-y: auto;"> 
+        
+      </div>
+      
+    </div>
+  </div>
+    
+</section>
+
+
+
+
+<%- include('../partials/footer') %>
+
+
+<!-- ******* All JS ******* -->
+<!-- jQuery js -->
+<script src="/public/js/jquery.min.js"></script>
+<!-- Popper js -->
+<script src="/public/js/popper.min.js"></script>
+<!-- Bootstrap js -->
+<script src="/public/js/bootstrap.min.js"></script>
+<!-- All js -->
+<script src="/public/js/poca.bundle.js"></script>
+<!-- Active js -->
+<script src="/public/js/default-assets/active.js"></script>
+
+<script>
+
+  jQuery(() => {
+
+  function printAlphabets(option){
+    
+    var i = 65;
+    var j = 91;
+   
+    if(option == 'small'){
+      i = 97;
+      j = 123; 
+    }
+   
+    for(k = i; k < j; k++){
+      var str =String.fromCharCode(k);
+
+      let a = `<a class="pl-2 pr-2 pt-1 pb-1 border" href="/singers/${str}">${str}</a>`
+      $('.alpha').append(a)
+    }
+
+    
+   
+  }
+
+  printAlphabets()
+})
+  
+</script>
+<%- include('../partials/bottom') %>
