@@ -10,7 +10,9 @@
   <div class="container">
 
     <div class="row">
-
+        <div class="col-12 text-center" style="overflow: hidden">
+          <script data-cfasync="false" type="text/javascript" src="https://www.geniusdexchange.com/a/display.php?r=3764999"></script>
+        </div>
         <!-- Latest songs  -->
         <div class="col-md-12 mt-5">
           <div class="row">
@@ -26,6 +28,17 @@
           <div class=" poca-portfolio">
             <ul class="list-group">
               <% for(let i=0; i< songs.length ; i++) { %>
+              <% if(i === 5) { %>
+              <li class="row list-group-item border-0 mt-1 mb-1" style="overflow: hidden;">  
+                <script data-cfasync="false" type="text/javascript" src="https://www.geniusdexchange.com/a/display.php?r=3765011"></script>
+              </li>
+              <% } %>
+              <% if(i === 9) { %>
+                <li class="row list-group-item border-0 mt-1 mb-1" style="overflow: hidden;">  
+                  <script data-cfasync="false" type="text/javascript" src="https://www.geniusdexchange.com/a/display.php?r=3765031"></script>
+                </li>
+                <% } %>
+                
               <li class="row list-group-item border-0 mt-1 mb-1">
                 <a href="/lyrics/<%= songs[i]._id %>">
                 <div class="col-12  single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
