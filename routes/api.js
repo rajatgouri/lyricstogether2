@@ -31,7 +31,7 @@ router.get('/home', async (req,res,next) => {
     res.render('pages/home', {
         'title': 'Lyrics Together',
         'pageTitle': 'Home- Lyrics Together',
-        'keywords': 'lyricstogether.com, lyricstogether, latest songs, song lyrics, punjabi song lyrics, hindi song lyrics, hindi lyrics, punjabi lyrics, latest hindi song, latest punjabi song, latest song lyrics',
+        'keywords': 'lyricstogether.com,lyrics lyricstogether, lyricstogether , lyrics search, songs words, azlyrics, lyric, youtube, free mp3 , music, free mp3 downloads, mp3, musica, youtube music, music downloader, song, mp3 download, play music,downlaod music, latest songs, song lyrics, free ,punjabi song lyrics, hindi song lyrics, hindi lyrics, punjabi lyrics, latest hindi song, latest punjabi song, latest song lyrics',
         'description': 'Lyrics Together is providing latest song lyrics.',
         'hindi': hindi,
         'punjabi': punjabi,
@@ -106,7 +106,7 @@ router.get('/songs/:id/:page', async(req,res,next) => {
     res.render('pages/category', {
         'title':  id + ' songs- Lyrics Together',
         'pageTitle': id +' Songs',
-        'keywords': `lyricstogether.com, latest ${id} songs lyrics, ${id} songs lyrics, new  ${id} songs`,
+        'keywords': `lyricstogether.com, lyrics lyricstogether ,latest ${id} songs, ${id} songs lyrics, new ${id} songs`,
         'description': 'Lyrics Together is providing Latest '+ id +' lyrics.',
         'language': id,
         'songs' :songs,
@@ -131,7 +131,7 @@ router.get('/lyrics/:id', async(req,res,next) => {
     res.render('pages/lyrics', {
         'title': song.Title + ' Lyrics Together',
         'keywords': keywords.toLowerCase(),
-        'description': `This song is Sung by ${song.Singer} and Lyrics by ${song.Lyricist} - Lyrics Together`,
+        'description': `${song.Title} - by ${song.Singer} | music ${song.Music} | lyricst ${song.Lyricist} ...`,
         'song': song,
         'pageTitle': song.Title + '-' + song.Singer
 
