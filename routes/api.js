@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router();
 const Lyrics = require('../models/lyrics')
 const Singers = require('../models/singers')
-
+const Keywords = require('../keywords.js');
 var nodemailer = require('nodemailer');
+const keywords = require('../keywords.js');
 
 var transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -33,8 +34,8 @@ router.get('/home', async (req,res,next) => {
     res.render('pages/home', {
         'title': 'Lyrics Together',
         'pageTitle': 'Home- Lyrics Together',
-        'keywords': 'lyricstogether.com,lyrics lyricstogether, lyricstogether , lyrics search, songs words, azlyrics, lyric, youtube, free mp3 , music, free mp3 downloads, mp3, musica, youtube music, music downloader, song, mp3 download, play music,downlaod music, latest songs, song lyrics, free ,punjabi song lyrics, hindi song lyrics, hindi lyrics, punjabi lyrics, latest hindi song, latest punjabi song, latest song lyrics',
-        'description': 'Lyrics Together is providing latest song lyrics.',
+        'keywords': keywords.categories,
+        'description': 'Lyrics Together is providing latest English , Hindi, punjabi and Tamil song lyrics.',
         'hindi': hindi,
         'punjabi': punjabi,
         'english': english,
@@ -110,7 +111,7 @@ router.get('/songs/:id/:page', async(req,res,next) => {
     res.render('pages/category', {
         'title':  id + ' songs- Lyrics Together',
         'pageTitle': id +' Songs',
-        'keywords': `lyricstogether.com, lyrics lyricstogether ,latest ${id} songs, ${id} songs lyrics, new ${id} songs`,
+        'keywords': Keywords.categories +  ` latest ${id} songs, ${id} songs lyrics, new ${id} songs`,
         'description': 'Lyrics Together is providing Latest '+ id +' lyrics.',
         'language': id,
         'songs' :songs,
