@@ -35,11 +35,11 @@ Last Update: Dec 14, 2018
   $heading: #232323; [Heading Color]
   $text: #666666; [Text Color]
   $bg-gray: #f4f4f4; [Gray Background]
-  $primary: #a24dff; [Primary Color]
+  $primary: #a24dff !important; [Primary Color]
   $white: #ffffff; [White Color]
   $dark: #000000; [Dark Color]
   $border: #ebebeb; [Border Color]
-  $hover: #a24dff; [Hover Color]
+  $hover: #a24dff !important; [Hover Color]
   $secondary: #a6a6a6; [Secondary Color]
 
   ---------------------------------------------
@@ -152,7 +152,7 @@ ul {
   top: 0;
   width: 30px;
   height: 30px;
-  background-color: #a24dff;
+  background-color: #a24dff !important;
   text-align: center;
   right: 0;
   padding-right: 0;
@@ -307,7 +307,7 @@ ul {
   .section-heading .line {
     width: 300px;
     height: 2px;
-    background-color: #a24dff; }
+    background-color: #a24dff !important; }
   .section-heading.text-center .line {
     margin: 0 auto; }
   .section-heading.white h2 {
@@ -320,7 +320,7 @@ ul {
   line-height: 42px;
   right: 0;
   width: 40px;
-  background-color: #a24dff;
+  background-color: #a24dff !important;
   color: #ffffff;
   text-align: center;
   height: 40px;
@@ -332,6 +332,13 @@ ul {
     background-color: #000000; }
 
 /* :: 6.0 Buttons CSS */
+
+
+.navbar-toggler {
+  color: white !important;
+    background: white !important;
+    height: 3px !important;
+}
 
 .poca-btn {
   position: relative;
@@ -351,12 +358,12 @@ ul {
   -webkit-transition: all 500ms;
   -o-transition: all 500ms;
   transition: all 500ms;
-  border: 2px solid #a24dff;
+  border: 2px solid #a24dff !important;
   letter-spacing: 1px;
 }
   .poca-btn.active, .poca-btn:focus, .poca-btn:hover {
     box-shadow: none;
-    background-color: #a24dff;
+    background-color: #a24dff !important;
     color: #ffffff; }
   .poca-btn.btn-2 {
     background-color: #ffffff;
@@ -383,7 +390,7 @@ ul {
     top: 0;
     width: 100%;
     position: fixed;
-    background-color: #a24dff;
+    background-color: #a24dff !important;
     box-shadow: 0 3px 50px rgba(0, 0, 0, 0.2);
     border-bottom: none;
     left: 0;
@@ -414,7 +421,7 @@ ul {
       text-transform: capitalize;
       color: #ffffff; }
       .classy-nav-container .classy-navbar .classynav ul li a:focus, .classy-nav-container .classy-navbar .classynav ul li a:hover {
-        color: #a24dff; }
+        color: #a24dff !important; }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
         .classy-nav-container .classy-navbar .classynav ul li a {
           font-size: 14px; } }
@@ -434,7 +441,7 @@ ul {
       position: absolute;
       width: 100%;
       height: 1px;
-      background-color: #a24dff;
+      background-color: #a24dff !important;
       bottom: 0;
       left: 50%;
       -webkit-transform: translateX(-50%);
@@ -547,7 +554,7 @@ ul {
       margin-right: 0; }
     .top-social-area a:focus, .top-social-area a:hover {
       font-size: 16px;
-      color: #a24dff; }
+      color: #a24dff !important; }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .breakpoint-on .classy-navbar .classy-menu {
@@ -663,7 +670,7 @@ ul {
       font-size: 12px;
       display: block;
       text-transform: uppercase;
-      color: #a24dff;
+      color: #a24dff !important;
       letter-spacing: 1px;
       font-weight: bold; }
     .poca-music-area .poca-music-content h2 {
@@ -695,7 +702,7 @@ ul {
           .poca-music-area .poca-music-content .music-meta-data p a {
             font-size: 12px; } }
         .poca-music-area .poca-music-content .music-meta-data p a:focus, .poca-music-area .poca-music-content .music-meta-data p a:hover {
-          color: #a24dff; }
+          color: #a24dff !important; }
     .poca-music-area .poca-music-content .likes-share-download {
       position: relative;
       z-index: 1;
@@ -708,7 +715,7 @@ ul {
           .poca-music-area .poca-music-content .likes-share-download a {
             font-size: 12px; } }
         .poca-music-area .poca-music-content .likes-share-download a:focus, .poca-music-area .poca-music-content .likes-share-download a:hover {
-          color: #a24dff; }
+          color: #a24dff !important; }
   .poca-music-area.style-2 {
     margin-bottom: -15px;
     height: 110px;
@@ -748,7 +755,7 @@ ul {
   .audioplayer .audioplayer-bar-loaded {
     display: none; }
   .audioplayer .audioplayer-bar-played {
-    background: #a24dff;
+    background: #a24dff !important;
     height: 5px; }
     .audioplayer .audioplayer-bar-played::after {
       display: none; }
@@ -759,10 +766,10 @@ ul {
   .audioplayer .audioplayer-volume-adjust > div {
     height: 5px; }
   .audioplayer .audioplayer-volume-adjust div div {
-    background-color: #a24dff;
+    background-color: #a24dff !important;
     height: 5px; }
   .audioplayer:not(.audioplayer-playing) .audioplayer-playpause, .audioplayer:not(.audioplayer-playing) .audioplayer-playpause:hover {
-    background-color: #a24dff; }
+    background-color: #a24dff !important; }
   .audioplayer:not(.audioplayer-playing) .audioplayer-playpause a {
     margin-left: 3px;
     border-left: 12px solid #ffffff; }
@@ -790,7 +797,7 @@ ul {
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: #a24dff;
+        background-color: #a24dff !important;
         content: '';
         z-index: 1; }
     .poca-projects-menu .btn:focus, .poca-projects-menu .btn:hover {
@@ -822,7 +829,7 @@ ul {
       margin-bottom: 5px; }
     .single-featured-guest .guest-info span {
       display: block;
-      color: #a24dff;
+      color: #a24dff !important;
       font-size: 14px;
       margin-bottom: 0; }
 
@@ -888,7 +895,7 @@ ul {
       right: 0;
       z-index: 10;
       height: 45px;
-      background-color: #a24dff;
+      background-color: #a24dff !important;
       color: #ffffff; }
       .poca-newsletter-area .newsletter-form button:focus, .poca-newsletter-area .newsletter-form button:hover {
         box-shadow: none;
@@ -949,7 +956,7 @@ ul {
     .breadcumb--con .breadcrumb .breadcrumb-item > a:hover,
     .breadcumb--con .breadcrumb .breadcrumb-item.active:focus,
     .breadcumb--con .breadcrumb .breadcrumb-item.active:hover {
-      color: #a24dff; }
+      color: #a24dff !important; }
   .breadcumb--con .breadcrumb .breadcrumb-item.active {
     color: #a6a6a6; }
     .breadcumb--con .breadcrumb .breadcrumb-item.active:focus, .breadcumb--con .breadcrumb .breadcrumb-item.active:hover {
@@ -984,7 +991,7 @@ ul {
       .single-blog-area .post-title {
         font-size: 30px; } }
     .single-blog-area .post-title:focus, .single-blog-area .post-title:hover {
-      color: #a24dff; }
+      color: #a24dff !important; }
   .single-blog-area .post-content {
     position: relative;
     z-index: 1;
@@ -992,7 +999,7 @@ ul {
     .single-blog-area .post-content .post-date {
       font-size: 12px;
       text-transform: uppercase;
-      color: #a24dff;
+      color: #a24dff !important;
       letter-spacing: 1px;
       display: block;
       margin-bottom: 5px;
@@ -1008,14 +1015,14 @@ ul {
         margin-right: 5px;
         text-transform: uppercase; }
         .single-blog-area .post-content .post-meta a:focus, .single-blog-area .post-content .post-meta a:hover {
-          color: #a24dff; }
+          color: #a24dff !important; }
     .single-blog-area .post-content p {
       font-size: 18px;
       color: #232323; }
     .single-blog-area .post-content .read-more-btn {
       font-size: 18px;
       font-weight: 600;
-      color: #a24dff; }
+      color: #a24dff !important; }
       .single-blog-area .post-content .read-more-btn:focus, .single-blog-area .post-content .read-more-btn:hover {
         color: #232323; }
 
@@ -1034,12 +1041,12 @@ ul {
     color: #666666;
     font-size: 16px; }
     .poca-pagination .pagination .page-item .page-link:focus, .poca-pagination .pagination .page-item .page-link:hover {
-      background-color: #a24dff;
-      border-color: #a24dff;
+      background-color: #a24dff !important;
+      border-color: #a24dff !important;
       color: #ffffff; }
   .poca-pagination .pagination .page-item.active .page-link {
-    background-color: #a24dff;
-    border-color: #a24dff;
+    background-color: #a24dff !important;
+    border-color: #a24dff !important;
     color: #ffffff; }
 
 .comment_area {
@@ -1105,8 +1112,8 @@ ul {
       .comment_area .comment-content .comment-meta a.like:focus, .comment_area .comment-content .comment-meta a.like:hover,
       .comment_area .comment-content .comment-meta a.reply:focus,
       .comment_area .comment-content .comment-meta a.reply:hover {
-        border-color: #a24dff;
-        background-color: #a24dff;
+        border-color: #a24dff !important;
+        background-color: #a24dff !important;
         color: #ffffff; }
   .comment_area .children {
     margin-left: 50px; }
@@ -1219,7 +1226,7 @@ ul {
     .podcast-details-content .post-content .post-date {
       font-size: 12px;
       text-transform: uppercase;
-      color: #a24dff;
+      color: #a24dff !important;
       letter-spacing: 1px;
       display: block;
       margin-bottom: 5px;
@@ -1238,7 +1245,7 @@ ul {
         margin-right: 5px;
         text-transform: uppercase; }
         .podcast-details-content .post-content .post-meta a:focus, .podcast-details-content .post-content .post-meta a:hover {
-          color: #a24dff; }
+          color: #a24dff !important; }
 
 .post-details-text {
   position: relative;
@@ -1284,7 +1291,7 @@ ul {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #a24dff;
+    background-color: #a24dff !important;
     line-height: 40px;
     color: #ffffff;
     margin-bottom: 10px;
@@ -1326,7 +1333,7 @@ ul {
       .post-catagories ul li a {
         font-size: 13px; } }
     .post-catagories ul li a:focus, .post-catagories ul li a:hover {
-      color: #a24dff; }
+      color: #a24dff !important; }
 
 .poca-pager {
   position: relative;
@@ -1353,7 +1360,7 @@ ul {
         .poca-pager a span {
           font-size: 12px; } }
       .poca-pager a span:focus, .poca-pager a span:hover {
-        color: #a24dff; }
+        color: #a24dff !important; }
     .poca-pager a:last-child {
       text-align: right; }
 
@@ -1375,11 +1382,11 @@ ul {
     border-radius: 0; }
     .search-widget-area form input:focus {
       box-shadow: none;
-      border: 1px solid #a24dff; }
+      border: 1px solid #a24dff !important; }
   .search-widget-area form button {
     width: 50px;
     height: 45px;
-    background-color: #a24dff;
+    background-color: #a24dff !important;
     padding: 0 15px;
     color: #ffffff;
     font-size: 14px;
@@ -1416,7 +1423,7 @@ ul {
       .catagories-list li a {
         font-size: 16px; } }
     .catagories-list li a:focus, .catagories-list li a:hover {
-      color: #a24dff; }
+      color: #a24dff !important; }
   .catagories-list li:first-child a {
     padding-top: 0; }
   .catagories-list li:last-child a {
@@ -1446,7 +1453,7 @@ ul {
         .single-news-area .blog-content .post-title {
           font-size: 16px; } }
       .single-news-area .blog-content .post-title:focus, .single-news-area .blog-content .post-title:hover {
-        color: #a24dff; }
+        color: #a24dff !important; }
     .single-news-area .blog-content .post-date {
       color: #a6a6a6;
       display: block;
@@ -1473,7 +1480,7 @@ ul {
     font-weight: 600;
     margin: 3px; }
     .tags-list li a:focus, .tags-list li a:hover {
-      background-color: #a24dff;
+      background-color: #a24dff !important;
       color: #ffffff; }
 
 /* :: 16.0 Footer CSS */
@@ -1496,7 +1503,7 @@ ul {
     display: inline-block;
     color: #ffffff;
     margin-right: 5px;
-    background-color: #a24dff;
+    background-color: #a24dff !important;
     width: 40px;
     height: 40px;
     border-radius: 20px;
@@ -1528,7 +1535,7 @@ ul {
       display: block;
       font-weight: 500; }
       .single-footer-widget .catagories-nav li a:focus, .single-footer-widget .catagories-nav li a:hover {
-        color: #a24dff; }
+        color: #a24dff !important; }
     .single-footer-widget .catagories-nav li:last-child a {
       margin-bottom: 0; }
   .single-footer-widget .single-latest-episodes {
@@ -1556,7 +1563,7 @@ ul {
         .single-footer-widget .single-latest-episodes .episodes-title {
           font-size: 14px; } }
       .single-footer-widget .single-latest-episodes .episodes-title:focus, .single-footer-widget .single-latest-episodes .episodes-title:hover {
-        color: #a24dff; }
+        color: #a24dff !important; }
 
 .copywrite-content {
   position: relative;
@@ -1569,7 +1576,7 @@ ul {
     .copywrite-content p a {
       color: #a6a6a6; }
       .copywrite-content p a:focus, .copywrite-content p a:hover {
-        color: #a24dff; }
+        color: #a24dff !important; }
 
 /* :: 17.0 Contact Area */
 .poca-contact-area {
@@ -1643,7 +1650,7 @@ ul {
     text-transform: capitalize; }
     .contact-form .form-control:focus {
       box-shadow: none;
-      border-color: #a24dff; }
+      border-color: #a24dff !important; }
   .contact-form textarea.form-control {
     height: 110px;
     padding: 15px; }
