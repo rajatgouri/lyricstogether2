@@ -11,7 +11,8 @@
   <div class="welcome-slides owl-carousel">
 
     <!-- Single Welcome Slide -->
-    <div class="welcome-welcome-slide bg-img bg-overlay" style="background-image: url(/public/img/bg-img/1.jpg);">
+    <div class="welcome-welcome-slide bg-img bg-overlay"
+      style="background-image: url(/public/img/bg-img/yellow-bg.jpg);">
       <div class="container h-100">
         <div class="row h-100 align-items-center">
           <div class="col-12">
@@ -19,7 +20,7 @@
             <div class="welcome-text">
               <h2 data-animation="fadeInUp" data-delay="100ms">Upto 500+ Songs Lyrics</h2>
               <h5 data-animation="fadeInUp" data-delay="300ms">
-                  Get upto 500+ Songs Lyrics Here
+                Get upto 500+ Songs Lyrics Here
               </h5>
             </div>
           </div>
@@ -28,7 +29,7 @@
     </div>
 
     <!-- Single Welcome Slide -->
-    <div class="welcome-welcome-slide bg-img bg-overlay" style="background-image: url(/public/img/bg-img/2.jpg);">
+    <div class="welcome-welcome-slide bg-img bg-overlay" style="background-image: url(/public/img/bg-img/blue-bg.jpg);">
       <div class="container h-100">
         <div class="row h-100 align-items-center">
           <div class="col-12">
@@ -38,7 +39,7 @@
               <h5 data-animation="fadeInUp" data-delay="300ms">
                 Get latest Hindi Music Lyrics Here.
               </h5>
-              
+
             </div>
 
           </div>
@@ -47,7 +48,8 @@
     </div>
 
     <!-- Single Welcome Slide -->
-    <div class="welcome-welcome-slide bg-img bg-overlay" style="background-image: url(/public/img/bg-img/3.jpg);">
+    <div class="welcome-welcome-slide bg-img bg-overlay"
+      style="background-image: url(/public/img/bg-img/music-bg.jpg);">
       <div class="container h-100">
         <div class="row h-100 align-items-center">
           <div class="col-12">
@@ -72,212 +74,313 @@
   <div class="container">
 
     <div class="row">
-        <div class="col-12 text-center" style="overflow:hidden">
-          <script data-cfasync="false" type="text/javascript" src="https://www.geniusdexchange.com/a/display.php?r=3764983"></script>
-        </div>
-        <!-- Latest songs  -->
-        <div class="col-md-6 mt-5">
-          <div class="row">
-            <!-- Section Heading -->
-            <div class="col-12">
-              <div class="section-heading ">
-                <h4>Latest Songs Lyrics</h4>
-                <div class="line"></div>
-              </div>
+      <div class="col-12 text-center" style="overflow:hidden">
+        <script data-cfasync="false" type="text/javascript"
+          src="https://www.geniusdexchange.com/a/display.php?r=3764983"></script>
+      </div>
+      <!-- Latest songs  -->
+      <div class="col-md-4 mt-5">
+        <div class="row">
+          <!-- Section Heading -->
+          <div class="col-12">
+            <div class="section-heading ">
+              <h4>Latest Songs Lyrics</h4>
+              <div class="line"></div>
             </div>
           </div>
-      
-          <div class=" poca-portfolio">
-            <ul class="list-group">
-              <% for (let i=0; i< all.length ; i++) { %>
-              
-              <% if( i === 5) { %>
-                <li class="row list-group-item border-0 mt-1 mb-1" style="overflow:hidden">
-                  <script data-cfasync="false" type="text/javascript" src="https://www.geniusdexchange.com/a/display.php?r=3764975"></script>
-                </li>
-              <% } %> 
-              <% if( i === 9) { %>
-                <li class="row list-group-item border-0 mt-1 mb-1" style="overflow:hidden">
-                  <script data-cfasync="false" type="text/javascript" src="https://www.geniusdexchange.com/a/display.php?r=3764979"></script>
-                </li>
-              <% } %> 
-              
-              <li class="row list-group-item border-0 mt-1 mb-1">
-                <a href='/lyrics/<%= all[i]._id %>'>
+        </div>
+
+        <div class=" poca-portfolio">
+          <ul class="list-group">
+            <% for (let i=0; i< all.length ; i++) { %>
+
+            <li class="row list-group-item border-0 mt-1 mb-1">
+              <a href='/lyrics/<%= all[i]._id %>'>
                 <div class="col-12  single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
                   <div class="poca-music-area style-2 row  flex-wrap">
                     <div class="col-4 h-100 col-sm-3  p-3 ">
-                      <img src="/public/img/bg-img/15.jpg" class="h-100 w-100" alt="">
+                      <img src="/public/img/bg-img/15.jpg" class="rounded-circle h-100 w-100" alt="">
                     </div>
                     <div class="col-8  col-sm-9 p-2">
                       <h6><%= all[i].Title.length > 20 ? all[i].Title.slice(0,20): all[i].Title %></h6>
                       <div class="meta leading-tight text-xs text-grey-dark">
                         <span class="block mt-1 w-full">
-                            Singer:
-                            <%= all[i].Singer.split(',')[0] %>
+                          Singer:
+                          <%= all[i].Singer.split(',')[0] %>
 
                         </span><br>
                         <span class="block mt-1 w-full">
-                            Lyricist:
-                            <%= all[i].Lyricist.split(',')[0] %>
+                          Lyricist:
+                          <%= all[i].Lyricist.split(',')[0] %>
                         </span> <br>
                         <span class="block mt-1 w-full">
                           Language:
                           <%= all[i].Language %>
-                      </span> 
+                        </span>
                       </div>
-                      
+
                     </div>
                   </div>
                 </div>
               </a>
-              </li> 
-              
-              <% } %>
-            </ul>
-      
-         
-          </div>
+            </li>
+
+            <% } %>
+          </ul>
+
+
         </div>
+      </div>
 
-        <!-- categories songs -->
-        <div class="col-md-6 mt-5">
+      <!-- categories songs -->
+      <div class="col-md-4 mt-5">
 
-
-          <!-- Punjabi -->
-          <div>
-            <div class="row">
-              <!-- Section Heading -->
-              <div class="col-12">
-                <div class="section-heading ">
-                  <h4>Latest Punjabi Songs</h4>
-                  <div class="line"></div>
-                </div>
+        <!-- Punjabi -->
+        <div>
+          <div class="row">
+            <!-- Section Heading -->
+            <div class="col-12">
+              <div class="section-heading ">
+                <h4>Latest Punjabi Songs</h4>
+                <div class="line"></div>
               </div>
             </div>
-        
-            <div class=" poca-portfolio">
-              <ul class="list-group">
-                <% for(let i=0; i< punjabi.length; i++) { %>
-                <li class="row list-group-item border-0 mt-1 mb-1">
+          </div>
+
+          <div class=" poca-portfolio">
+            <ul class="list-group">
+              <% for(let i=0; i< punjabi.length; i++) { %>
+              <li class="row list-group-item border-0 mt-1 mb-1">
                 <a href='/lyrics/<%= punjabi[i]._id %>'>
 
                   <div class="col-12  single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
                     <div class="poca-music-area style-2 row  flex-wrap">
                       <div class="col-4 h-100 col-sm-3  p-3 ">
-                        <img src="/public/img/bg-img/15.jpg" class="h-100 w-100" alt="">
+                        <img src="/public/img/bg-img/15.jpg" class="rounded-circle h-100 w-100" alt="">
                       </div>
                       <div class="col-8  col-sm-9 p-2">
                         <h6><%= punjabi[i].Title.length > 20 ? punjabi[i].Title.slice(0,20): punjabi[i].Title %></h6>
                         <div class="meta leading-tight text-xs text-grey-dark">
                           <span class="block mt-1 w-full">
-                              Singer:
-                              <%= punjabi[i].Singer.split(',')[0] %>
-                              
+                            Singer:
+                            <%= punjabi[i].Singer.split(',')[0] %>
+
                           </span><br>
                           <span class="block mt-1 w-full">
-                              Lyricist:
-                              <%= punjabi[i].Lyricist.split(',')[0] %>
-                              
+                            Lyricist:
+                            <%= punjabi[i].Lyricist.split(',')[0] %>
+
                           </span> <br>
                           <span class="block mt-1 w-full">
                             Language:
                             <%= punjabi[i].Language %>
-                        </span> 
+                          </span>
                         </div>
-                        
+
                       </div>
                     </div>
                   </div>
-                  </a>
-                </li> 
-                <% } %>
-              </ul>
-        
-           
+                </a>
+              </li>
+              <% } %>
+            </ul>
+
+
+          </div>
+
+          <div class="row">
+            <div class="col-12 text-center">
+              <a href="/songs/punjabi" class="btn poca-btn mt-3">Load More</a>
             </div>
-  
-            <div class="row"> 
-              <div class="col-12 text-center">
-                <a href="/songs/punjabi" class="btn poca-btn mt-3">Load More</a>
+          </div>
+        </div>
+
+        <!-- Hindi -->
+        <div>
+          <div class="row mt-5">
+            <!-- Section Heading -->
+
+            <div class="col-12">
+              <div class="section-heading ">
+                <h4>Latest Hindi Songs</h4>
+                <div class="line"></div>
               </div>
             </div>
           </div>
-          
 
+          <div class=" poca-portfolio mt-2">
+            <ul class="list-group">
 
-        <!-- Hindi -->
-          <div>
-            <div class="row mt-5">
-              <!-- Section Heading -->
-              
-              <div class="col-12">
-                <div class="section-heading ">
-                  <h4>Latest Hindi Songs</h4>
-                  <div class="line"></div>
-                </div>
-              </div>
-            </div>
-        
-            <div class=" poca-portfolio mt-2">
-              <ul class="list-group">
-
-                <% for(let i=0; i< hindi.length; i++ ) { %>
-                <li class="row list-group-item border-0 mt-1 mb-1">
+              <% for(let i=0; i< hindi.length; i++ ) { %>
+              <li class="row list-group-item border-0 mt-1 mb-1">
                 <a href='/lyrics/<%= hindi[i]._id %>'>
 
                   <div class="col-12  single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
                     <div class="poca-music-area style-2 row  flex-wrap">
                       <div class="col-4 h-100 col-sm-3  p-3 ">
-                        <img src="/public/img/bg-img/15.jpg" class="h-100 w-100" alt="">
+                        <img src="/public/img/bg-img/15.jpg" class="rounded-circle h-100 w-100" alt="">
                       </div>
                       <div class="col-8  col-sm-9 p-2">
                         <h6><%= hindi[i].Title.length > 20 ? hindi[i].Title.slice(0,20): hindi[i].Title %></h6>
                         <div class="meta leading-tight text-xs text-grey-dark">
                           <span class="block mt-1 w-full">
-                              Singer:
-                              <%= hindi[i].Singer.split(',')[0] %>
+                            Singer:
+                            <%= hindi[i].Singer.split(',')[0] %>
                           </span><br>
                           <span class="block mt-1 w-full">
-                              Lyricist:
-                              <%= hindi[i].Lyricist.split(',')[0] %>
-                          </span><br> 
+                            Lyricist:
+                            <%= hindi[i].Lyricist.split(',')[0] %>
+                          </span><br>
                           <span class="block mt-1 w-full">
                             Language:
                             <%= hindi[i].Language %>
-                        </span> 
+                          </span>
                         </div>
-                        
+
                       </div>
                     </div>
                   </div>
-                  </a>
-                </li> 
-                <% } %>
-              </ul>
+                </a>
+              </li>
+              <% } %>
+            </ul>
 
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <a href="/songs/hindi" class="btn poca-btn mt-3">Load More</a>
             </div>
-            <div class="row"> 
-              <div class="col-12 text-center">
-                <a href="/songs/hindi" class="btn poca-btn mt-3">Load More</a>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="col-md-4 mt-5">
+
+        <!-- English-->
+        <div>
+          <div class="row">
+            <!-- Section Heading -->
+            <div class="col-12">
+              <div class="section-heading ">
+                <h4>Latest English Songs</h4>
+                <div class="line"></div>
               </div>
             </div>
           </div>
-          
+
+          <div class=" poca-portfolio">
+            <ul class="list-group">
+              <% for(let i=0; i< english.length; i++) { %>
+              <li class="row list-group-item border-0 mt-1 mb-1">
+                <a href='/lyrics/<%= english[i]._id %>'>
+
+                  <div class="col-12  single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="poca-music-area style-2 row  flex-wrap">
+                      <div class="col-4 h-100 col-sm-3  p-3 ">
+                        <img src="/public/img/bg-img/15.jpg" class="rounded-circle h-100 w-100" alt="">
+                      </div>
+                      <div class="col-8  col-sm-9 p-2">
+                        <h6><%= english[i].Title.length > 20 ? english[i].Title.slice(0,20): english[i].Title %></h6>
+                        <div class="meta leading-tight text-xs text-grey-dark">
+                          <span class="block mt-1 w-full">
+                            Singer:
+                            <%= english[i].Singer.split(',')[0] %>
+
+                          </span><br>
+                          <span class="block mt-1 w-full">
+                            Lyricist:
+                            <%= english[i].Lyricist.split(',')[0] %>
+
+                          </span> <br>
+                          <span class="block mt-1 w-full">
+                            Language:
+                            <%= english[i].Language %>
+                          </span>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <% } %>
+            </ul>
+
+
+          </div>
+
+          <div class="row">
+            <div class="col-12 text-center">
+              <a href="/songs/english" class="btn poca-btn mt-3">Load More</a>
+            </div>
+          </div>
         </div>
 
+        <!-- Tamil -->
+        <div>
+          <div class="row mt-5">
+            <!-- Section Heading -->
+
+            <div class="col-12">
+              <div class="section-heading ">
+                <h4>Latest Tamil Songs</h4>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" poca-portfolio mt-2">
+            <ul class="list-group">
+
+              <% for(let i=0; i< tamil.length; i++ ) { %>
+              <li class="row list-group-item border-0 mt-1 mb-1">
+                <a href='/lyrics/<%= tamil[i]._id %>'>
+
+                  <div class="col-12  single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="poca-music-area style-2 row  flex-wrap">
+                      <div class="col-4 h-100 col-sm-3  p-3 ">
+                        <img src="/public/img/bg-img/15.jpg" class="rounded-circle h-100 w-100" alt="">
+                      </div>
+                      <div class="col-8  col-sm-9 p-2">
+                        <h6><%= tamil[i].Title.length > 20 ? tamil[i].Title.slice(0,20): tamil[i].Title %></h6>
+                        <div class="meta leading-tight text-xs text-grey-dark">
+                          <span class="block mt-1 w-full">
+                            Singer:
+                            <%= tamil[i].Singer.split(',')[0] %>
+                          </span><br>
+                          <span class="block mt-1 w-full">
+                            Lyricist:
+                            <%= tamil[i].Lyricist.split(',')[0] %>
+                          </span><br>
+                          <span class="block mt-1 w-full">
+                            Language:
+                            <%= tamil[i].Language %>
+                          </span>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <% } %>
+            </ul>
+
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <a href="/songs/tamil" class="btn poca-btn mt-3">Load More</a>
+            </div>
+          </div>
         </div>
 
+      </div>
     </div>
-    
-
-
-
-
+  </div>
 </section>
-
-
-
 
 <%- include('../partials/footer') %>
 

@@ -23,8 +23,10 @@ router.get('/home', async (req,res,next) => {
 
     let hindi = await Lyrics.find({'Language': 'Hindi'}).sort([['createdAt', -1]]).limit(5);
     let punjabi = await Lyrics.find({'Language': 'Punjabi'}).sort([['createdAt', -1]]).limit(5);
+    let english = await Lyrics.find({'Language': 'English'}).sort([['createdAt', -1]]).limit(5);
+    let tamil = await Lyrics.find({'Language': 'Tamil'}).sort([['createdAt', -1]]).limit(5);
     
-    let all = [...hindi, ...punjabi]
+    let all = [...hindi.slice(0,2), ...punjabi.slice(0,2), ...english.slice(0,2), ...tamil.slice(0,2)]
     all = all.sort(() => Math.random() - 0.5)
     
 
@@ -35,6 +37,8 @@ router.get('/home', async (req,res,next) => {
         'description': 'Lyrics Together is providing latest song lyrics.',
         'hindi': hindi,
         'punjabi': punjabi,
+        'english': english,
+        'tamil': tamil,
         'all': all
 
     })
