@@ -111,7 +111,7 @@ router.get('/songs/:id/:page', async(req,res,next) => {
     res.render('pages/category', {
         'title':  id + ' songs- Lyrics Together',
         'pageTitle': id +' Songs',
-        'keywords': Keywords.categories +  ` latest ${id} songs, ${id} songs lyrics, new ${id} songs`,
+        'keywords': Keywords.categories +  ` latest ${id} songs, `,
         'description': 'Lyrics Together is providing Latest '+ id +' lyrics.',
         'language': id,
         'songs' :songs,

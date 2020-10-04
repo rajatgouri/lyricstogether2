@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Access public folder from root
 app.use('/public', express.static('public'));
-
+app.use('/',express.static('public'))
 
 const MONGODB_URI = 'mongodb+srv://Rajat:Rajat@123@cluster0.vu89l.gcp.mongodb.net/olyrics?retryWrites=true&w=majority';
 
@@ -41,8 +41,6 @@ mongoose
     app.listen(port, () => {
         console.log('server is listening on port: ' + port);
       });
-
-      
   })
   .catch(err => {
     console.log(err);
