@@ -22,6 +22,7 @@ router.get('/', (req,res,next) => {
 
 router.get('/home', async (req,res,next) => {
 
+    console.log(req.connection.remoteAddress)
     let hindi = await Lyrics.find({'Language': 'Hindi'}).sort([['createdAt', -1]]).limit(5);
     let punjabi = await Lyrics.find({'Language': 'Punjabi'}).sort([['createdAt', -1]]).limit(5);
     let english = await Lyrics.find({'Language': 'English'}).sort([['createdAt', -1]]).limit(5);
