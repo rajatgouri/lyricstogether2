@@ -35,7 +35,7 @@ router.get('/home', async (req,res,next) => {
     res.render('pages/home', {
         'title': 'Lyrics Together',
         'pageTitle': 'Home- Lyrics Together',
-        'keywords': keywords.categories,
+        'keywords': "Tamil Song Lyrics , Punjabi Song Lyrics in Hindi, Punjabi Songs in Written, Punjabi Songs Lyrics for Whatsapp Status, Famous English Songs with Lyrics, lyricstogether, lyricstogether.com",
         'description': 'Lyrics Together is providing latest English , Hindi, punjabi and Tamil song lyrics.',
         'hindi': hindi,
         'punjabi': punjabi,
@@ -112,7 +112,7 @@ router.get('/songs/:id/:page', async(req,res,next) => {
     res.render('pages/category', {
         'title':  id + ' songs- Lyrics Together',
         'pageTitle': id +' Songs',
-        'keywords': Keywords.categories +  ` latest ${id} songs, `,
+        'keywords': `lyricstogether, lyricstogether.com, ${id} Song Lyrics, New ${id} Songs Lyrics, Bollywood Song Lyrics, Latest ${id} Song Lyrics, ${id} Songs Lyrics for Status, Indian Songs Lyrics`,
         'description': 'Lyrics Together is providing Latest '+ id +' lyrics.',
         'language': id,
         'songs' :songs,
@@ -131,7 +131,7 @@ router.get('/lyrics/:id', async(req,res,next) => {
 
     let title = song.Title.replace(' Lyrics', '');
     keywords += ', '+ title + ' song, ' +', ' + title + ' song lyrics,' 
-    keywords += ' lyricstogether.com'
+    keywords += ' lyricstogether.com, lyricstogether'
 
     
     res.render('pages/lyrics', {
